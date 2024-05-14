@@ -1,0 +1,28 @@
+<div class="row d-flex align-items-center">
+  <div class="col-md-2">
+    <div class="l-topbar__logo">
+      <figure>
+        <img [src]="routerAssets()" alt="Logo da E-Sports Readers" />
+      </figure>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <nav class="l-topbar__nav">
+      <a
+        *ngFor="let link of navLinks"
+        [routerLink]="link.route"
+        routerLinkActive="activate"
+        #rla="routerLinkActive"
+        class="l-topbar__nav-item"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        {{ link.label }}
+      </a>
+    </nav>
+  </div>
+  <div class="col-md-2">
+    <div class="l-topbar__date">
+      <h5>Date</h5>
+    </div>
+  </div>
+</div>

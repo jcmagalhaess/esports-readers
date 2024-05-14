@@ -14,3 +14,22 @@ export const MENU: IMenu[] = [
     route: './rainbow-six',
   },
 ];
+
+export const MENU_AUX: IMenu[] = [
+  {
+    label: 'Sports',
+    route: './sports',
+  },
+  {
+    label: 'Live Play',
+    route: './live-play',
+  },
+  {
+    label: 'Statistics',
+    route: './statistics',
+  },
+  {
+    label: 'Ranking',
+    route: './ranking',
+  },
+]
