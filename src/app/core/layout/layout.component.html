@@ -9,11 +9,10 @@
         routerLinkActive="active"
         #rla="routerLinkActive"
         class="l-main__nav-item"
-        [routerLinkActiveOptions]="{exact: true}">
-        <figure
-        #tooltip="matTooltip"
+        [matTooltip]="link.label"
         matTooltipPosition="after"
-        [matTooltip]="link.label">
+        [routerLinkActiveOptions]="{exact: true}">
+        <figure>
           <img [src]="routerAssets(link.route)" alt="{{ link.label }}">
         </figure>
       </a>
