@@ -21,8 +21,13 @@
     </nav>
   </div>
   <div class="col-md-2">
-    <div class="l-topbar__date">
-      <h5>Date</h5>
+    <div class="row">
+      <div class="col-md-8">
+        <app-timezone-select></app-timezone-select>
+      </div>
+      <div class="col-md-4">
+        <button mat-flat-button color="primary" class="w-100" [style.height]="'56px'">Login</button>
+      </div>
     </div>
   </div>
 </div>

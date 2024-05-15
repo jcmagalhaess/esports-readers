@@ -1,0 +1,15 @@
+<mat-form-field appearance="outline" class="w-100" [matTooltip]="formatedLabel(timezone.value)" matTooltipPosition="below">
+  <mat-select [formControl]="timezone">
+    <mat-select-trigger class="timezone">
+      <strong>{{ currentLocalTime | date: 'HH:mm' }}</strong>
+      @if ((timezone.value?.length || 0) > 1) {
+        <span class="timezone__local">
+          ({{ formatedLabel(timezone.value) }})
+        </span>
+      }
+    </mat-select-trigger>
+    @for (zone of timezoneList; track $index) {
+      <mat-option [value]="zone">{{ formatedLabel(zone) }}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
