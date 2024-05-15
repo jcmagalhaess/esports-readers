@@ -7,17 +7,18 @@ import { TimezoneSelectRepository } from './repository/timezone-select.repositor
   providedIn: 'root',
 })
 export class TimezoneSelectService {
-  public loading$ = new BehaviorSubject<boolean>(false);
+  public loadingList$ = new BehaviorSubject<boolean>(false);
+  public loadingByName$ = new BehaviorSubject<boolean>(false);
 
   constructor(private readonly _repository: TimezoneSelectRepository) {}
 
   public getTimezoneList() {
     return new Promise<string[]>((resolve, reject) => {
-      this.loading$.next(true);
+      this.loadingList$.next(true);
 
       this._repository
         .getTimezoneList()
-        .pipe(finalize(() => this.loading$.next(false)))
+        .pipe(finalize(() => this.loadingList$.next(false)))
         .subscribe({
           next: (res) => resolve(res),
           error: (err) => reject(err),
@@ -27,10 +28,10 @@ export class TimezoneSelectService {
 
   public getTimezoneByName(zone: string) {
     return new Promise<TimezoneOutput>((resolve, reject) => {
-      this.loading$.next(true);
+      this.loadingByName$.next(true);
       this._repository
         .getTimezoneByName(zone)
-        .pipe(finalize(() => this.loading$.next(false)))
+        .pipe(finalize(() => this.loadingByName$.next(false)))
         .subscribe({
           next: (res) => resolve(res),
           error: (err) => reject(err),

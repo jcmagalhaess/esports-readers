@@ -2,9 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TimezoneSelectService } from '../services/timezone-select.service';
+
 
 @Component({
   selector: 'app-timezone-select',
@@ -15,7 +17,8 @@ import { TimezoneSelectService } from '../services/timezone-select.service';
     MatSelect,
     MatSelectModule,
     ReactiveFormsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatProgressSpinnerModule
   ],
   templateUrl: './timezone-select.component.html',
   styleUrl: './timezone-select.component.scss',
@@ -26,6 +29,14 @@ export class TimezoneSelectComponent implements OnInit {
   public timezoneList: string[] = [];
 
   public currentLocalTime = new Date();
+
+  get loadingList$() {
+    return this._service.loadingList$;
+  }
+
+  get loadingByName$() {
+    return this._service.loadingByName$;
+  }
 
   constructor(private readonly _service: TimezoneSelectService) {}
 
