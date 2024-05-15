@@ -17,6 +17,10 @@ export const MENU: IMenu[] = [
 
 export const MENU_AUX: IMenu[] = [
   {
+    label: 'Schedule',
+    route: './schedule',
+  },
+  {
     label: 'Sports',
     route: './sports',
   },
