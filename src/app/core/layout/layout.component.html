@@ -1,0 +1,32 @@
+<div class="l-main">
+  <div class="l-main__sidemenu">
+    <div class="l-main__toggle">
+      <i class="fa-solid fa-bars-staggered"></i>
+    </div>
+    <nav class="l-main__nav">
+      <a *ngFor="let link of navLinks"
+        [routerLink]="link.route"
+        routerLinkActive="active"
+        #rla="routerLinkActive"
+        class="l-main__nav-item"
+        [matTooltip]="link.label"
+        matTooltipPosition="after"
+        [routerLinkActiveOptions]="{exact: true}">
+        <figure>
+          <img [src]="routerAssets(link.route)" alt="{{ link.label }}">
+        </figure>
+      </a>
+    </nav>
+  </div>
+  <div class="l-main__content">
+    <div class="l-main__topbar">
+      <app-top-bar></app-top-bar>
+    </div>
+    <main #tabPanel>
+      <ng-content></ng-content>
+    </main>
+  </div>
+</div>
+
+
+
