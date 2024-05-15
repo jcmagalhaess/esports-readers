@@ -11,11 +11,10 @@
       <a
         *ngFor="let link of navLinks"
         [routerLink]="link.route"
+        [relativeTo]="activatedRoute"
+        [replaceUrl]="'sad'"
         routerLinkActive="activate"
-        #rla="routerLinkActive"
-        class="l-topbar__nav-item"
-        [routerLinkActiveOptions]="{ exact: true }"
-      >
+        class="l-topbar__nav-item">
         {{ link.label }}
       </a>
     </nav>

@@ -36,7 +36,7 @@ module.exports = {
 
         // For hosts (please adjust)
         remotes: {
-          "esrValorant": "esrValorant@http://localhost:4300/remoteEntry.js",
+          "remoteApp": "remoteApp@http://localhost:4300/remoteEntry.js",
         },
 
         shared: share({
