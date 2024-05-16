@@ -24,6 +24,9 @@ export class TopBarComponent implements AfterViewInit {
   public parentPath: string = '';
 
   constructor(public readonly activatedRoute: ActivatedRoute) {
+  }
+
+  public ngAfterViewInit(): void {
     this.activatedRoute.parent?.url
       .pipe(map((parentPath) => parentPath[parentPath.length - 1].path))
       .subscribe((path) => {
@@ -32,9 +35,9 @@ export class TopBarComponent implements AfterViewInit {
         console.log(path, this.parentPath);
 
       });
-  }
 
-  public ngAfterViewInit(): void {
+      console.log('tes', this.activatedRoute);
+
   }
 
   public routerAssets() {

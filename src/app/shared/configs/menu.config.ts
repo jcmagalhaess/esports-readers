@@ -18,22 +18,22 @@ export const MENU: IMenu[] = [
 export const MENU_AUX: IMenu[] = [
   {
     label: 'Schedule',
-    route: './schedule',
+    route: '/valorant/schedule',
   },
   {
     label: 'Sports',
-    route: './sports',
+    route: '/valorant/sports',
   },
   {
     label: 'Live Play',
-    route: './live-play',
+    route: '/valorant/live-play',
   },
   {
     label: 'Statistics',
-    route: './statistics',
+    route: '/valorant/statistics',
   },
   {
     label: 'Ranking',
-    route: './ranking',
+    route: '/valorant/ranking',
   },
 ]
