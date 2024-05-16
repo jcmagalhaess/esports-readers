@@ -10,5 +10,5 @@ import { LayoutComponent } from './core/layout/layout.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'esports-readers';
+  public title = "E-Sports Readers";
 }

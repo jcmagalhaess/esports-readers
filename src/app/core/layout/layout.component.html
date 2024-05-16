@@ -7,8 +7,8 @@
       <a *ngFor="let link of navLinks"
         [routerLink]="link.route"
         routerLinkActive="l-main__nav-item--active"
-        #rla="routerLinkActive"
         class="l-main__nav-item"
+        (click)="getRouteRoot(link.route)"
         [matTooltip]="link.label"
         matTooltipPosition="after">
         <figure>

@@ -1,3 +1,4 @@
+import { signal } from '@angular/core';
 import { IMenu } from '../interfaces/menu.interface';
 
 export const MENU: IMenu[] = [
@@ -18,22 +19,24 @@ export const MENU: IMenu[] = [
 export const MENU_AUX: IMenu[] = [
   {
     label: 'Schedule',
-    route: '/valorant/schedule',
+    route: '/schedule',
   },
   {
     label: 'Sports',
-    route: '/valorant/sports',
+    route: '/sports',
   },
   {
     label: 'Live Play',
-    route: '/valorant/live-play',
+    route: '/live-play',
   },
   {
     label: 'Statistics',
-    route: '/valorant/statistics',
+    route: '/statistics',
   },
   {
     label: 'Ranking',
-    route: '/valorant/ranking',
+    route: '/ranking',
   },
 ]
+
+export const routeMFESignal = signal<string>('');
