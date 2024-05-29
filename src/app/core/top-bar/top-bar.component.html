@@ -10,9 +10,7 @@
     <nav class="l-topbar__nav">
       <a
         *ngFor="let link of navLinks"
-        [routerLink]="link.route"
-        [relativeTo]="activatedRoute"
-        [replaceUrl]="'sad'"
+        [routerLink]="routeMFESignal + link.route"
         routerLinkActive="activate"
         class="l-topbar__nav-item">
         {{ link.label }}
@@ -20,13 +18,6 @@
     </nav>
   </div>
   <div class="col-md-2">
-    <div class="row">
-      <div class="col-md-8">
-        <app-timezone-select></app-timezone-select>
-      </div>
-      <div class="col-md-4">
-        <button mat-flat-button color="primary" class="w-100" [style.height]="'56px'">Login</button>
-      </div>
-    </div>
+    <app-timezone-select></app-timezone-select>
   </div>
 </div>
