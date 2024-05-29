@@ -62,7 +62,7 @@
         "esbuild": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/esports-readers/browser",
+            "outputPath": "dist",
             "index": "src/index.html",
             "polyfills": ["zone.js", "es-module-shims"],
             "tsConfig": "tsconfig.app.json",
