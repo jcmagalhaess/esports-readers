@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TimezoneOutput } from '../entities/timezone.entity';
 
@@ -7,20 +7,20 @@ import { TimezoneOutput } from '../entities/timezone.entity';
   providedIn: 'root',
 })
 export class TimezoneSelectRepository {
-  constructor(private readonly _http: HttpClient) {}
+  private readonly _http = inject(HttpClient);
 
-  getTimezoneList(): Observable<string[]> {
+  public getTimezoneList(): Observable<string[]> {
     return this._http.get<string[]>(
       'https://timeapi.io/api/TimeZone/AvailableTimeZones'
     );
   }
 
-  getTimezoneByName(query: string): Observable<TimezoneOutput> {
+  public getTimezoneByName(query: string): Observable<TimezoneOutput> {
+    let params = {
+      timeZone: query,
+    }
     return this._http.get<TimezoneOutput>(
-      `https://timeapi.io/api/TimeZone/zone?timeZone=${query.replace(
-        /[+]/gi,
-        '%2B'
-      )}`
+      `https://timeapi.io/api/TimeZone/zone?${ new URLSearchParams(params) }`
     );
   }
 }
