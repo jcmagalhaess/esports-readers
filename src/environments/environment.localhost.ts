@@ -16,7 +16,7 @@ export const environment = {
   production: false,
   REVERSE_PROXY: REVERSE_PROXY_URL,
   BACKEND_URL: BACKEND_URL_CONST,
-  MFE_PROJECT: MFE_PROJECT
+  FEDERATION: 'federation.manifest.production'
 };
 
 /*
