@@ -3,7 +3,7 @@ import { AfterViewInit, Component, inject } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { Router, RouterModule } from '@angular/router';
-import { MENU } from '../../shared/configs/menu.config';
+import { MENU, routeMFESignal } from '../../shared/configs/menu.config';
 import { IMenu } from '../../shared/interfaces/menu.interface';
 import { TopBarComponent } from '../top-bar/top-bar.component';
 
@@ -30,7 +30,7 @@ export class LayoutComponent implements AfterViewInit {
 
     console.log(parentPath);
 
-    // routeMFESignal.set(parentPath ?? '');
+    routeMFESignal.set(parentPath ?? '');
   }
 
   public routerAssets(item: string) {
@@ -41,6 +41,6 @@ export class LayoutComponent implements AfterViewInit {
     this._route.navigateByUrl(route)
     console.log(route);
 
-    // routeMFESignal.set(route);
+    routeMFESignal.set(route);
   }
 }
