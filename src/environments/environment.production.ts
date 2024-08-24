@@ -4,15 +4,12 @@
 
 const PROTOCOL = window.location.protocol;
 const HOSTNAME = window.location.hostname;
-const PORT = 8080;
 
-export const DEV_URL = '';
-
-const REVERSE_PROXY_URL = `${PROTOCOL}//${HOSTNAME}:${PORT}`;
+const REVERSE_PROXY_URL = `${PROTOCOL}//${HOSTNAME}`;
 const BACKEND_URL_CONST = `${REVERSE_PROXY_URL}`;
 
 export const environment = {
-  production: false,
+  production: true,
   REVERSE_PROXY: REVERSE_PROXY_URL,
   BACKEND_URL: BACKEND_URL_CONST,
   FEDERATION: 'federation.manifest.production'

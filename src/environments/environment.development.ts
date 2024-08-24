@@ -6,8 +6,6 @@ const PROTOCOL = window.location.protocol;
 const HOSTNAME = window.location.hostname;
 const PORT = 8080;
 
-export const DEV_URL = '';
-
 const REVERSE_PROXY_URL = `${PROTOCOL}//${HOSTNAME}:${PORT}`;
 const BACKEND_URL_CONST = `${REVERSE_PROXY_URL}`;
 
