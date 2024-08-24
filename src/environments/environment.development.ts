@@ -10,13 +10,11 @@ export const DEV_URL = '';
 
 const REVERSE_PROXY_URL = `${PROTOCOL}//${HOSTNAME}:${PORT}`;
 const BACKEND_URL_CONST = `${REVERSE_PROXY_URL}`;
-const MFE_PROJECT_URL = (window as any)["env"]['MFE_PROJECT_URL'];
 
 export const environment = {
   production: false,
   REVERSE_PROXY: REVERSE_PROXY_URL,
   BACKEND_URL: BACKEND_URL_CONST,
-  MFE_PROJECT_URL: MFE_PROJECT_URL
 };
 
 /*
