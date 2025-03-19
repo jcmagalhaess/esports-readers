@@ -8,17 +8,16 @@ import { IMenu } from '../../shared/interfaces/menu.interface';
 import { TopBarComponent } from '../top-bar/top-bar.component';
 
 @Component({
-  selector: 'app-layout',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatTabsModule,
-    MatTooltipModule,
-    TopBarComponent,
-  ],
-  templateUrl: './layout.component.html',
-  styleUrl: './layout.component.scss',
+    selector: 'app-layout',
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatTabsModule,
+        MatTooltipModule,
+        TopBarComponent,
+    ],
+    templateUrl: './layout.component.html',
+    styleUrl: './layout.component.scss'
 })
 export class LayoutComponent implements AfterViewInit {
   private readonly _route = inject(Router);

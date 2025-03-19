@@ -4,11 +4,10 @@ import { LayoutComponent } from './core/layout/layout.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [RouterOutlet, LayoutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  public title = "E-Sports Readers";
+  title = 'esports-readers';
 }
