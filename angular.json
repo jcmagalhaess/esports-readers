@@ -23,7 +23,13 @@
           },
 					"configurations": {
 						"production": {
-							"target": "esports-readers:esbuild:production"
+							"target": "esports-readers:esbuild:production",
+              "fileReplacements": [
+                {
+                  "replace": "public/federation.manifest.json",
+                  "with": "src/federation.manifest.prod.json"
+                }
+              ]
 						},
 						"development": {
 							"target": "esports-readers:esbuild:development",
