@@ -1,24 +1,59 @@
-# ESportsReaders
+# BoilerplateMfeAngular
 
-The idea behind this project is to make an project MFE with module federation. So, we desided to address the topic of esports, but only with focus in showing the results of games and show the schedules of tournaments around the world.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
 
-Firstly, the idea of this repository is to be just a host project, we'll create other repositories with focus on a specific game.
+## Development server
 
-Layout by [Tzu Ning](https://dribbble.com/shots/22759537-SportBet), reference obtained from the Dribbble website.
+To start a local development server, run:
 
-Obs: This is a project with the sole objective of applying our knowledge into practice, on a non-profit bases.
+```bash
+ng serve
+```
 
-## Tools
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-* Angular (v17)
-* Native Federation (MicroFrontend)
-* Angular Material
-* Bootstrap
+## Code scaffolding
 
-## APIs
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-* [Timeapi.io](https://timeapi.io/) - Used to obtain the timezone of different countries and users can to navigate to the time of other locations.
+```bash
+ng generate component component-name
+```
 
-## UPDATES
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-* (About module federation) - Initially, we decided to use the module federation structure, but with the recent changes in the Angular framework, module federation became invalid because it limited us to only using the module in the application.
+```bash
+ng generate --help
+```
+
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

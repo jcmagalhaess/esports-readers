@@ -9,18 +9,18 @@ import { TimezoneSelectService } from '../services/timezone-select.service';
 
 
 @Component({
-  selector: 'app-timezone-select',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    ReactiveFormsModule,
-    MatTooltipModule,
-    MatProgressSpinnerModule
-  ],
-  templateUrl: './timezone-select.component.html',
-  styleUrl: './timezone-select.component.scss',
+    selector: 'app-timezone-select',
+    imports: [
+      CommonModule,
+      MatFormFieldModule,
+      MatSelectModule,
+      ReactiveFormsModule,
+      MatTooltipModule,
+      MatProgressSpinnerModule
+    ],
+    standalone: true,
+    templateUrl: './timezone-select.component.html',
+    styleUrl: './timezone-select.component.scss'
 })
 export class TimezoneSelectComponent implements OnInit {
   public timezone = new FormControl<string>('America/Fortaleza');
