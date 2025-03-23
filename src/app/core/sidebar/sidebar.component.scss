@@ -1,0 +1,9 @@
+$component-name: 'sidebar';
+.#{$component-name} {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 300px;
+  padding-inline: 30px;
+}

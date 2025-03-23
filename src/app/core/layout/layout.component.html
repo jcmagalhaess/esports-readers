@@ -19,9 +19,12 @@
     <div class="l-main__topbar">
       <app-top-bar></app-top-bar>
     </div>
-    <main class="p-4">
-      <ng-content></ng-content>
-    </main>
+    <div class="d-flex">
+      <app-sidebar></app-sidebar>
+      <main class="p-4">
+        <ng-content></ng-content>
+      </main>
+    </div>
   </div>
 </div>
 

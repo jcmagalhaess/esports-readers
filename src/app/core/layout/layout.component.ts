@@ -5,6 +5,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
 import { mainRouteMFE, MENU } from '../../shared/configs/menu.config';
 import { IMenu } from '../../shared/interfaces/menu.interface';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 import { TopBarComponent } from '../top-bar/top-bar.component';
 
 @Component({
@@ -15,6 +16,7 @@ import { TopBarComponent } from '../top-bar/top-bar.component';
       MatTabsModule,
       MatTooltipModule,
       TopBarComponent,
+      SidebarComponent
     ],
     templateUrl: './layout.component.html',
     styleUrl: './layout.component.scss'
