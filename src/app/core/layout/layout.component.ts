@@ -10,11 +10,11 @@ import { TopBarComponent } from '../top-bar/top-bar.component';
 @Component({
     selector: 'app-layout',
     imports: [
-        CommonModule,
-        RouterModule,
-        MatTabsModule,
-        MatTooltipModule,
-        TopBarComponent,
+      CommonModule,
+      RouterModule,
+      MatTabsModule,
+      MatTooltipModule,
+      TopBarComponent,
     ],
     templateUrl: './layout.component.html',
     styleUrl: './layout.component.scss'

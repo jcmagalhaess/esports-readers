@@ -8,9 +8,7 @@
         [routerLink]="link.route"
         routerLinkActive="l-main__nav-item--active"
         class="l-main__nav-item"
-        (click)="getRouteRoot(link.route)"
-        [matTooltip]="link.label"
-        matTooltipPosition="after">
+        (click)="getRouteRoot(link.route)">
         <figure>
           <img [src]="routerAssets(link.route)" alt="{{ link.label }}">
         </figure>

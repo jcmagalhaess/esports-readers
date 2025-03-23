@@ -10,8 +10,9 @@
     <nav class="l-topbar__nav">
       <a
         *ngFor="let link of navLinks"
-        [routerLink]="routeMFESignal + link.route"
+        [routerLink]="'valorant' + link.route"
         routerLinkActive="activate"
+        [routerLinkActiveOptions]="{ exact: true }"
         class="l-topbar__nav-item">
         {{ link.label }}
       </a>
