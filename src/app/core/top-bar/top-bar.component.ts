@@ -2,26 +2,22 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
-import { MENU_AUX, routeMFESignal } from '../../shared/configs/menu.config';
+import { mainRouteMFE, MENU_AUX } from '../../shared/configs/menu.config';
 import { IMenu } from '../../shared/interfaces/menu.interface';
 
 @Component({
-    selector: 'app-top-bar',
-    imports: [
-        CommonModule,
-        RouterModule,
-        MatButtonModule,
-    ],
-    templateUrl: './top-bar.component.html',
-    styleUrl: './top-bar.component.scss'
+  selector: 'app-top-bar',
+  imports: [CommonModule, RouterModule, MatButtonModule],
+  templateUrl: './top-bar.component.html',
+  styleUrl: './top-bar.component.scss',
 })
 export class TopBarComponent {
   public navLinks: IMenu[] = MENU_AUX;
   public parentPath: string = '';
 
-  get routeMFESignal() {
-    return routeMFESignal();
-  };
+  public getSubRoute(route: string) {
+    return `${mainRouteMFE()}/${route}`
+  }
 
   public routerAssets() {
     return `../../../assets/img/sportsbet-io-logo.png`;

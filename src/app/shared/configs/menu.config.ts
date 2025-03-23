@@ -11,24 +11,24 @@ export const MENU: IMenu[] = [
 export const MENU_AUX: IMenu[] = [
   {
     label: 'Schedule',
-    route: '/schedule',
+    route: 'schedule',
   },
   {
     label: 'Sports',
-    route: '/sports',
+    route: 'sports',
   },
   {
     label: 'Live Play',
-    route: '/live-play',
+    route: 'live-play',
   },
   {
     label: 'Statistics',
-    route: '/statistics',
+    route: 'statistics',
   },
   {
     label: 'Ranking',
-    route: '/ranking',
+    route: 'ranking',
   },
 ]
 
-export const routeMFESignal = signal<string>('');
+export const mainRouteMFE = signal<string>('valorant');
